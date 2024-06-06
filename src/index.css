@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-gradient {
+    background: linear-gradient(145deg, rgba(252, 144, 126, 1) 0%, rgba(159, 110, 237, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+.gradient{
+    background: linear-gradient(228deg, #fc907e, #9f6eed);
+}
+
+.btn {
+    background-color: var(--background-color);
+    /* color: #222; */
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    /* background: linear-gradient(145deg, rgba(252, 144, 126, 1) 0%, rgba(159, 110, 237, 1) 100%); */
+    /* -webkit-background-clip: text; */
+    /* background-clip: text; */
+    /* color: transparent; */
+    text-shadow:0px 0px 0  linear-gradient(228deg, #fc907e, #9f6eed);
+    --background-color: #151218;
+    --border-size: 2px;
+    --accent-color: linear-gradient(228deg, #fc907e, #9f6eed);;
+  }
+
+  
+  .btn.btn-background-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: var(--background-color);
+    border-radius:3rem;
+    transition: transform 300ms ease-in-out;
+  
+    transform: scale(1.5);
+  }
+  
+  .btn.btn-background-circle:hover::before,
+  .btn.btn-background-circle:focus::before {
+    transform: scale(0);
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, 1);
+  }
+  
+  .btn.btn-background-circle {
+    z-index: 1;
+    overflow: hidden;
+    /* background: none; */
+    border: 2px solid;
+    border-image: linear-gradient(to right, #fc907e, #9f6eed);
+    border-image-slice: 1;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    /* color: transparent; */
+    /* background-clip: text; */
+    /* -webkit-background-clip: text; */
+    background-image: linear-gradient(to right, #fc907e, #9f6eed);
+    transition: color 500ms ease-in-out;
+  }
+  
+  .btn.btn-background-circle:hover,
+  .btn.btn-background-circle:focus {
+    color: white!important;
+  }
+  
+  @media only screen and (max-width: 1020px){
+    .btn.btn-background-circle{
+      
+
+      padding:9px 7px;
+      font-size: 8px;
+    }
+  } 
+
+  .gradient-border {
+    position: relative;
+    padding: 1rem;
+    border-radius: 20px;
+  }
+  
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    top: -2px; /* Adjust according to border width */
+    left: -2px; /* Adjust according to border width */
+    right: -2px; /* Adjust according to border width */
+    bottom: -2px; /* Adjust according to border width */
+    border: 2px solid;
+    border-radius: inherit;
+    background: linear-gradient(to right, #fc907e, #9f6eed);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) padding-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude; 
+    z-index: -1;
+  }
+  
+  .footer-box{
+    background: linear-gradient(114deg, #9f6eed, #fc907e, #9f6eed, #fc907e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite
+  }
