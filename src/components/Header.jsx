@@ -20,11 +20,11 @@ export default function Header() {
 
                 </a>
             </button>
-            <img className="absolute w-[8rem] left-[7rem] lg:left-[13rem] lg:w-[45%] top-4" src="./public/assets/hero-home-text.svg" alt="" />
+            <img className="absolute w-[8rem] left-[7rem] lg:left-[13rem] lg:w-[45%] top-4" src="./assets/hero-home-text.svg" alt="" />
               </div>
               </div>
             <div className="w-[60%] h-[60%] relative">
-              <img src="./public/assets/Hero Image.svg" className=" absolute right-0 top-8 lg:right-[-4rem] lg:top-[-3rem] " alt="" />
+              <img src="./assets/Hero Image.svg" className=" absolute right-0 top-8 lg:right-[-4rem] lg:top-[-3rem] " alt="" />
             </div>
             </div>
         </div>
